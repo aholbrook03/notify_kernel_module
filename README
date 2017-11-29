@@ -1,0 +1,15 @@
+My kernel version: 2.6.32.38
+
+fork.c:
+	lines 77-94
+		added variables to handle mem and proc notification
+	in do_fork (lines 1427-1443)
+		logic for checking if number of processes is too high
+	update_ramstats (lines 108-135)
+		logic for checking if memory usage is too high
+
+gfp.h:
+	lines 12 and 288:
+		declare, and call update_ramstats when memory is allocated
+		
+notify.c is my user process. 
